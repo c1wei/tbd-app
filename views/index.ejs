@@ -7,10 +7,27 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-	<p>hello world</p>
-    <p>johngamboa wuz here lulz</p>
-    <p>i am here</p>
-    <p> vanna wuz here l0l0rz0rs</p>
-    <p> yo </p>
+    <div>
+      <form>
+        <input id="date" type="text" name="date" />
+        <button type="button" onclick="formatDate()">Format Date</button>
+      </form>
+      <div>
+        <span id="result"></span>
+      </div>
+    </div>
   </body>
+  <script>
+    function formatDate() {
+      var date = document.getElementById('date').value;
+
+      fetch('/date/format', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ date: date })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) { document.getElementById('result').innerHTML = data.date; });
+    }
+  </script>
 </html>
