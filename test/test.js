@@ -40,17 +40,20 @@ describe('IsValidDate', function() {
   })
 });
 
-describe('date2', function() {
-  describe('#date2()', function() {
-    it('should return back true if passed date', function() {
+describe('formatDate', function() {
+  describe('#formatDate()', function() {
+    it('should return back true if passed valid string', function() {
       var foo = require('../date/date');
-      assert.equal(foo.date2('date2'), true);
+      assert.equal(foo.formatDate('10032017'), '10-03-2017');
+      assert.equal(foo.formatDate('04202017'), '04-20-2017');
     });
 
-    it('should return back false if passed something other than date', function() {
+    it('should pass if passed in an invalid string', function() {
       var foo = require('../date/date');
-      assert.equal(foo.date2('foo'), false);
-      assert.equal(foo.date2('bar'), false);
+      assert.equal(foo.formatDate('1234567'), null);
+      assert.equal(foo.formatDate('1212-014'), null);
+      assert.equal(foo.formatDate('05a6abcd'), null);
     });
+    
   })
 });
