@@ -1,8 +1,142 @@
 body {
+  background-color: #688191;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px 'Lato', Calibri, Arial, san-serif;
 }
 
-a {
-  color: #00B7FF;
+header {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font: 'Lato', Calibri, Arial, san-serif;
+  letter-spacing: 2px;  
+}
+
+header:after {
+  content:' ';
+  display:block;
+  border:1px solid white;
+}
+
+#rightH:after {
+   content:' ';
+   display:block;
+   border:1px solid #688191;
+}
+
+#form-wrapper {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  margin-top: 100px;
+}
+
+#row {
+  display: table-row;
+}
+
+#form1 {
+  display: table-cell;
+  width: 400px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%, -50%);
+}
+
+#form2 {
+  display:table-cell;
+  width: 400px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#first {
+  background-color: #a7e5ed; 
+  padding-top: 30px;
+  padding-bottom: 100px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #ffffff;
+}
+
+#second {
+  background-color: #fefefe; 
+  color: #688191;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#date {
+  border: none;
+  outline: none;
+  background-color: #eafafa;
+  font-family: 'Lato', Calibri, Arial, san-serif;
+	font-size: 20px;
+  font-weight: 500;
+  color: #5acfdd;
+}
+
+#date2 {
+  border: none;
+  outline: none;
+  background-color: #d5f6ec;
+  font-family: 'Lato', Calibri, Arial, san-serif;
+	font-size: 20px;
+  font-weight: 500;
+  color: #42d5aa;
+}
+
+.btn {
+	border: none;
+	font-family: 'Lato', Calibri, Arial, san-serif;
+	font-size: 18px;
+	color: #ffffff;
+	cursor: pointer;
+	padding: 10px 30px;
+  border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none; 
+  position: relative;
+  -webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.btn1 {
+  background: #89dde7;
+   box-shadow: 0 6px #5acfdd;
+}
+
+.btn2 {
+  background: #70dfbf;
+  box-shadow: 0 6px #42d5aa;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn1:active {
+	box-shadow: 0 0 #5acfdd;
+	top: 6px;
+}
+
+.btn2:active {
+	box-shadow: 0 0 #42d5aa;
+	top: 6px;
 }

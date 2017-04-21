@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div>
-      <form>
-	<p>Format Date<p>
-	<p>Note: In order to format, input must be 8 digits.</p>
-	<p>Example: 11031995 ==> 11-03-1995 </p>
-        <input id="date" type="text" name="date" />
-        <button type="button" onclick="formatDate()">Format Date</button>
-      </form>
-      <div>
-        <span id="formatResult"></span>
-      </div>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <div>
+    <form>
+     <p>Format Date<p>
+       <p>Note: In order to format, input must be 8 digits.</p>
+       <p>Example: 11031995 ==> 11-03-1995 </p>
+       <input id="date" type="text" name="date" />
+       <button type="button" onclick="formatDate()">Format Date</button>
+     </form>
+     <div>
+      <span id="formatResult"></span>
     </div>
-    <div>
-	<p>----------</p>
-    </div>
-    <div>
-      <form>
-	<p>Validate Date<p>
-	<p>Note: In order to have validate it must be in XX-XX-XXXX (month, day, year) format</p> 
-	<p>Example: 11-03-1995 ==> true </p>
-        <input id="date2" type="text" name="date2" />
-        <button type="button" onclick="validateDate()">Validate Date</button>
-      </form>
-      <div>
-        <span id="validateResult"></span>
-      </div>
-    </div>
-  </body>
-  <script>
-    function formatDate() {
-      var date = document.getElementById('date').value;
+  </div>
+  <div>
+   <p>----------</p>
+ </div>
+ <div>
+  <form>
+   <p>Validate Date<p>
+     <p>Note: In order to have validate it must be in XX-XX-XXXX (month, day, year) format</p> 
+     <p>Example: 11-03-1995 ==> true </p>
+     <input id="date2" type="text" name="date2" />
+     <button type="button" onclick="validateDate()">Validate Date</button>
+   </form>
+   <div>
+    <span id="validateResult"></span>
+  </div>
+</div>
+</body>
+<script>
+  function formatDate() {
+    var date = document.getElementById('date').value;
 	//request
-      fetch('/date/format', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ date: date })
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) { document.getElementById('formatResult').innerHTML = data.date; });
-    }
-  </script>
-  
-  <script>
-    function validateDate() {
-      var date2 = document.getElementById('date2').value;
+  fetch('/date/format', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ date: date })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) { document.getElementById('formatResult').innerHTML = data.date; });
+}
+</script>
+
+<script>
+  function validateDate() {
+    var date2 = document.getElementById('date2').value;
 	//request
-      fetch('/date/isValid', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ date2: date2 })
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) { document.getElementById('validateResult').innerHTML = data.valid; });
-    }
-  </script>
+  fetch('/date/isValid', {
+    method: 'post',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ date2: date2 })
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) { document.getElementById('validateResult').innerHTML = data.valid; });
+}
+</script>
 </html>
