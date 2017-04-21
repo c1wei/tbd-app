@@ -9,6 +9,9 @@
     <p>Welcome to <%= title %></p>
     <div>
       <form>
+	<p>Format Date<p>
+	<p>Note: In order to format, input must be 8 digits.</p>
+	<p>Example: 11031995 ==> 11-03-1995 </p>
         <input id="date" type="text" name="date" />
         <button type="button" onclick="formatDate()">Format Date</button>
       </form>
@@ -17,10 +20,13 @@
       </div>
     </div>
     <div>
-	<p>space space space</p>
+	<p>----------</p>
     </div>
     <div>
       <form>
+	<p>Validate Date<p>
+	<p>Note: In order to have validate it must be in XX-XX-XXXX (month, day, year) format</p> 
+	<p>Example: 11-03-1995 ==> true </p>
         <input id="date2" type="text" name="date2" />
         <button type="button" onclick="validateDate()">Validate Date</button>
       </form>
