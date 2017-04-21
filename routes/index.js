@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.use('/date', date);
 router.use('/hello', hello);
+router.use('/date', date);
 
 module.exports = router;

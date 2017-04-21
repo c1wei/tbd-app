@@ -1,6 +1,9 @@
 function isValidDate(date) {
     var matches = /^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/.exec(date);
-    if (matches == null) return false;
+    
+    if (matches == null){ 
+      return false;
+    }
     var d = matches[2];
     var m = matches[1] - 1;
     var y = matches[3];
