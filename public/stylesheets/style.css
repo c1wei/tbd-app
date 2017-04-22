@@ -20,6 +20,7 @@ header:after {
 	border:1.25px solid white;
 }
 
+
 #rightH:after {
 	content:' ';
 	display:block;
@@ -41,6 +42,7 @@ header:after {
 #form1 {
 	display: table-cell;
 	width: 500px;
+	height: 400px;
 	text-align: center;
 	vertical-align: middle;
 	position: absolute;
@@ -51,6 +53,7 @@ header:after {
 #form2 {
 	display:table-cell;
 	width: 500px;
+	height: 400px;
 	text-align: center;
 	vertical-align: middle;
 	position: absolute;
@@ -60,18 +63,18 @@ header:after {
 
 #first {
 	background-color: #a7e5ed; 
-	padding-top: 37px;
-	padding-bottom: 125px;
-	box-shadow: 0 10px 12.5px 0 rgba(0, 0, 0, 0.2), 0 7.5px 25px 0 rgba(0, 0, 0, 0.19);
 	color: #ffffff;
+	padding-top: 37px;
+	box-shadow: 0 10px 12.5px 0 rgba(0, 0, 0, 0.2), 0 7.5px 25px 0 rgba(0, 0, 0, 0.19);
+	height: 400px;
 }
 
 #second {
 	background-color: #fefefe; 
 	color: #688191;
 	padding-top: 37px;
-	padding-bottom: 125px;
 	box-shadow: 0 10px 12.5px 0 rgba(0, 0, 0, 0.2), 0 7.5px 25px 0 rgba(0, 0, 0, 0.19);
+	height: 400px;
 }
 
 #date {
@@ -92,6 +95,20 @@ header:after {
 	font-size: 25px;
 	font-weight: 625;
 	color: #42d5aa;
+}
+
+#formatResult {
+	color: #2bc3d4;
+	text-align: left;
+	margin-top: 10px;
+	padding-left: 50px;
+}
+
+#validateResult {
+	color: #29bc90;
+	text-align: left;
+	margin-top: 10px;
+	padding-left: 50px;
 }
 
 .btn {
