@@ -1,7 +1,7 @@
   <!DOCTYPE html>
   <html>
   <head>
-
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <div id = "form-wrapper">
@@ -12,10 +12,8 @@
           <p>Example: 11031995 ==> 11-03-1995 </p>
           <input id="date" type="text" name="date" />
           <button class = "btn btn1" type="button" onclick="formatDate()">Format </button>
-        </form>
-        <div>
-          <span id="formatResult"></span>
-        </div>
+          <div id="formatResult"> </div>
+        </form>  
       </div>
 
       <div id = "form2">
@@ -25,10 +23,8 @@
           <p>Example: 11-03-1995 ==> true </p>
           <input id="date2" type="text" name="date2" />
           <button class = "btn btn2" type="button" onclick="validateDate()">Validate</button>
+          <div id="validateResult"> </div>
         </form>
-        <div>
-          <span id="validateResult"></span>
-        </div>
       </div>
     </div>
   </body>
