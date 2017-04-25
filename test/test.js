@@ -50,9 +50,9 @@ describe('formatDate', function() {
 
     it('should pass if passed in an invalid string', function() {
       var foo = require('../date/date');
-      assert.equal(foo.formatDate('1234567'), null);
-      assert.equal(foo.formatDate('1212-014'), null);
-      assert.equal(foo.formatDate('05a6abcd'), null);
+      assert.equal(foo.formatDate('1234567'), "Invalid input");
+      assert.equal(foo.formatDate('1212-014'), "Invalid input");
+      assert.equal(foo.formatDate('05a6abcd'), "Invalid input");
     });
     
   })
