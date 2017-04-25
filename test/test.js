@@ -54,6 +54,13 @@ describe('formatDate', function() {
       assert.equal(foo.formatDate('1212-014'), "Invalid input");
       assert.equal(foo.formatDate('05a6abcd'), "Invalid input");
     });
-    
+
+    it('should pass back date if date is already formatted', function() {
+      var foo = require('../date/date');
+      assert.equal(foo.formatDate('11-03-1995'), '11-03-1995');
+      assert.equal(foo.formatDate('12-31-2017'), '12-31-2017');
+      assert.equal(foo.formatDate('01-16-2006'), '01-16-2006');
+    });
+
   })
 });

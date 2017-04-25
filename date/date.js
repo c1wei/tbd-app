@@ -1,7 +1,7 @@
 function isValidDate(date) {
     var matches = /^(\d{1,2})[-\/](\d{1,2})[-\/](\d{4})$/.exec(date);
-    
-    if (matches == null){ 
+
+    if (matches == null){
       return false;
     }
     var d = matches[2];
@@ -15,18 +15,21 @@ function isValidDate(date) {
 }
 
 function formatDate(date) {
-  if (date.length != 8) 
-    return "Invalid input"; 
+  if (isValidDate(date))
+    return date;
+
+  if (date.length != 8)
+    return "Invalid input";
 
   var m = date.substring(0,2);
   var d = date.substring(2,4);
   var y = date.substring(4);
-  
-  if (isNaN(m) || isNaN(d) || isNaN(y)) 
-    return "Invalid input"; 
+
+  if (isNaN(m) || isNaN(d) || isNaN(y))
+    return "Invalid input";
 
   if ( m < 0 || d < 0 || y < 0)
-    return "Invalid input"; 
+    return "Invalid input";
 
   return m + "-" + d + "-" + y;
 }
