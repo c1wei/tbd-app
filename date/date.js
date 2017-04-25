@@ -16,17 +16,17 @@ function isValidDate(date) {
 
 function formatDate(date) {
   if (date.length != 8) 
-    return null; 
+    return "Invalid input"; 
 
   var m = date.substring(0,2);
   var d = date.substring(2,4);
   var y = date.substring(4);
   
   if (isNaN(m) || isNaN(d) || isNaN(y)) 
-    return null;
+    return "Invalid input"; 
 
   if ( m < 0 || d < 0 || y < 0)
-    return null;
+    return "Invalid input"; 
 
   return m + "-" + d + "-" + y;
 }
